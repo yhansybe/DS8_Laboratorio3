@@ -39,8 +39,16 @@
         FrmAgregarCuenta.Show()
     End Sub
 
-    Private Sub FrmPrincipal_Closed(sender As Object, e As EventArgs) Handles MyBase.Closed
-        FrmAuth.Close()
+    Private Sub CreacionDeClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreacionDeClienteToolStripMenuItem.Click
+        FrmRetiroDeposito.Close()
+        FrmMovimientos.Close()
+        FrmAgregarCuenta.Close()
+        FrmCrearCliente.Close()
+
+        FrmCrearCliente.MdiParent = Me
+        FrmCrearCliente.WindowState = FormWindowState.Maximized
+        FrmCrearCliente.ControlBox = False
+        FrmCrearCliente.Show()
     End Sub
 
 End Class

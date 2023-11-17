@@ -73,41 +73,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="auth\FrmAuth.Designer.vb">
-      <DependentUpon>FrmAuth.vb</DependentUpon>
-    </Compile>
-    <Compile Include="auth\FrmAuth.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="auth\FrmLogin.Designer.vb">
-      <DependentUpon>FrmLogin.vb</DependentUpon>
-    </Compile>
-    <Compile Include="auth\FrmLogin.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="principal\FrmAgregarCuenta.Designer.vb">
+    <Compile Include="pantallas\FrmAgregarCuenta.Designer.vb">
       <DependentUpon>FrmAgregarCuenta.vb</DependentUpon>
     </Compile>
-    <Compile Include="principal\FrmAgregarCuenta.vb">
+    <Compile Include="pantallas\FrmAgregarCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="principal\FrmMovimientos.Designer.vb">
+    <Compile Include="pantallas\FrmCrearCliente.Designer.vb">
+      <DependentUpon>FrmCrearCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pantallas\FrmCrearCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pantallas\FrmMovimientos.Designer.vb">
       <DependentUpon>FrmMovimientos.vb</DependentUpon>
     </Compile>
-    <Compile Include="principal\FrmMovimientos.vb">
+    <Compile Include="pantallas\FrmMovimientos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="principal\FrmPrincipal.vb">
+    <Compile Include="pantallas\FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="principal\FrmPrincipal.Designer.vb">
+    <Compile Include="pantallas\FrmPrincipal.Designer.vb">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="auth\FrmRegister.Designer.vb">
-      <DependentUpon>FrmRegister.vb</DependentUpon>
-    </Compile>
-    <Compile Include="auth\FrmRegister.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -125,27 +113,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="principal\FrmRetiroDeposito.Designer.vb">
+    <Compile Include="pantallas\FrmRetiroDeposito.Designer.vb">
       <DependentUpon>FrmRetiroDeposito.vb</DependentUpon>
     </Compile>
-    <Compile Include="principal\FrmRetiroDeposito.vb">
+    <Compile Include="pantallas\FrmRetiroDeposito.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="auth\FrmAuth.resx">
-      <DependentUpon>FrmAuth.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="auth\FrmLogin.resx">
-      <DependentUpon>FrmLogin.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="principal\FrmPrincipal.resx">
+    <EmbeddedResource Include="pantallas\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

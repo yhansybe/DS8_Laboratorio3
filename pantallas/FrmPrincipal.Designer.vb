@@ -26,13 +26,14 @@ Partial Class FrmPrincipal
         Me.RetirosYDepositosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CrearCuentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CreacionDeClienteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RetirosYDepositosToolStripMenuItem, Me.MovimientosToolStripMenuItem, Me.CrearCuentaToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RetirosYDepositosToolStripMenuItem, Me.MovimientosToolStripMenuItem, Me.CrearCuentaToolStripMenuItem, Me.CreacionDeClienteToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
@@ -57,6 +58,12 @@ Partial Class FrmPrincipal
         Me.CrearCuentaToolStripMenuItem.Size = New System.Drawing.Size(106, 24)
         Me.CrearCuentaToolStripMenuItem.Text = "Crear cuenta"
         '
+        'CreacionDeClienteToolStripMenuItem
+        '
+        Me.CreacionDeClienteToolStripMenuItem.Name = "CreacionDeClienteToolStripMenuItem"
+        Me.CreacionDeClienteToolStripMenuItem.Size = New System.Drawing.Size(150, 24)
+        Me.CreacionDeClienteToolStripMenuItem.Text = "Creacion de cliente"
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -78,4 +85,5 @@ Partial Class FrmPrincipal
     Friend WithEvents RetirosYDepositosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MovimientosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CrearCuentaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CreacionDeClienteToolStripMenuItem As ToolStripMenuItem
 End Class
