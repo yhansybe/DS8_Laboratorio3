@@ -33,3 +33,24 @@ CREATE TABLE tbl_movimientos (
     fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (id_cuenta) REFERENCES tbl_cuenta(id_cuenta)
 );
+
+--Creación de Procedure selectMovimientos
+
+CREATE PROCEDURE selectMovimientos
+    @idCuenta INT
+AS
+BEGIN
+    SELECT *
+    FROM tbl_movimientos
+    WHERE id_cuenta = @idCuenta;
+END;
+
+--Creación de Procedure selectCuentas
+CREATE PROCEDURE selectCuentas
+    @idCliente INT
+AS
+BEGIN
+    SELECT *
+    FROM tbl_cuenta
+    WHERE id_cliente = @idCliente;
+END;

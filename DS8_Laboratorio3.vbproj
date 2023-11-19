@@ -102,6 +102,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -130,6 +131,9 @@
     <EmbeddedResource Include="pantallas\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallas\FrmRetiroDeposito.resx">
+      <DependentUpon>FrmRetiroDeposito.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="clases\.gitkeep" />
@@ -146,7 +150,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pexels-shonejai-1227515.jpg" />
     <Content Include="scripts\database.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
