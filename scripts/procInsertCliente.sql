@@ -1,10 +1,10 @@
 ﻿DELIMITER //
 --creacion del proc y paramtros a utilizar para insertar el cliente
 CREATE PROCEDURE proc_insert_cliente(
-    IN nombre VARCHAR(50),
-    IN apellido VARCHAR(50),
-    IN direccion VARCHAR(100),
-    IN telefono_movil VARCHAR(15),
+    IN p_nombre VARCHAR(50),
+    IN p_apellido VARCHAR(50),
+    IN p_direccion VARCHAR(100),
+    IN p_telefono_movil VARCHAR(15),
     OUT resul BOOLEAN
 )
 BEGIN

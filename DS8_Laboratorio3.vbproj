@@ -209,6 +209,7 @@
   <ItemGroup>
     <Content Include="scripts\database.sql" />
     <Content Include="scripts\procInsertCuenta.sql" />
+    <Content Include="scripts\procUpdateCliente.sql" />
     <Content Include="xml\env.xml" />
     <Content Include="scripts\procInsertCliente.sql" />
   </ItemGroup>

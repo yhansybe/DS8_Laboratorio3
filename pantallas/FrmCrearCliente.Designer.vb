@@ -33,6 +33,7 @@ Partial Class FrmCrearCliente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.txtApellido = New System.Windows.Forms.TextBox()
+        Me.btnUpdate = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,7 +54,7 @@ Partial Class FrmCrearCliente
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(196, 278)
+        Me.btnAgregar.Location = New System.Drawing.Point(12, 282)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(115, 47)
         Me.btnAgregar.TabIndex = 12
@@ -82,7 +83,7 @@ Partial Class FrmCrearCliente
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtNombre)
         Me.Panel1.Controls.Add(Me.txtApellido)
-        Me.Panel1.Location = New System.Drawing.Point(92, 61)
+        Me.Panel1.Location = New System.Drawing.Point(12, 65)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(339, 194)
         Me.Panel1.TabIndex = 13
@@ -137,11 +138,21 @@ Partial Class FrmCrearCliente
         Me.txtApellido.Size = New System.Drawing.Size(124, 20)
         Me.txtApellido.TabIndex = 5
         '
+        'btnUpdate
+        '
+        Me.btnUpdate.Location = New System.Drawing.Point(192, 282)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(115, 47)
+        Me.btnUpdate.TabIndex = 14
+        Me.btnUpdate.Text = "Actualizar Cliente"
+        Me.btnUpdate.UseVisualStyleBackColor = True
+        '
         'FrmCrearCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(485, 400)
+        Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
@@ -164,4 +175,5 @@ Partial Class FrmCrearCliente
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnUpdate As Button
 End Class

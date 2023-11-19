@@ -1,9 +1,9 @@
 ﻿DELIMITER //
 --Creación del proc y declaración de parametros
 CREATE PROCEDURE proc_insert_cuenta(
-    IN saldo DECIMAL(10, 2),
-    IN tipo VARCHAR(50),
-    IN id_cliente INT,
+    IN p_saldo DECIMAL(10, 2),
+    IN p_tipo VARCHAR(50),
+    IN p_id_cliente INT,
     OUT resul BOOLEAN
 )
 

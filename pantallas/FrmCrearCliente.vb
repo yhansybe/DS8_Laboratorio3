@@ -3,9 +3,20 @@ Imports MySql.Data.MySqlClient
 Public Class FrmCrearCliente
     Private conn As MySqlConnection
 
+
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Dim objAgregarCliente As New ClassAgregarCliente(txtNombre, txtApellido, txtDireccion, txtTelefono)
         objAgregarCliente.agregarCliente()
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        Dim num_cuenta As Integer
+        Dim nombre_cuenta, separador() As String
+        Dim objAgregarCliente As New ClassAgregarCliente()
+        num_cuenta = InputBox("Ingrese el numero de cuenta", "Actualizar Cuenta")
+        nombre_cuenta = InputBox("Ingrese el nombre y apellido nuevo de la cuenta", "Actualizar")
+        separador = nombre_cuenta.Split(" ")
+        objAgregarCliente.actualizarCliente(num_cuenta, separador)
     End Sub
 
     Private Sub txtTelefono_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelefono.KeyPress
