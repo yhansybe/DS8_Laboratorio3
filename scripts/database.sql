@@ -2,7 +2,7 @@ CREATE DATABASE ds8_lab3;
 
 USE ds8_lab3;
 
--- Creación de la tabla tbl_datoscliente
+-- Creaciï¿½n de la tabla tbl_datoscliente
 CREATE TABLE tbl_datoscliente (
     id_cliente INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE tbl_datoscliente (
     fecha_modificacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Creación de la tabla tbl_cuenta
+-- Creaciï¿½n de la tabla tbl_cuenta
 CREATE TABLE tbl_cuenta (
     id_cuenta INT PRIMARY KEY AUTO_INCREMENT,
     id_cliente INT,
@@ -24,7 +24,7 @@ CREATE TABLE tbl_cuenta (
     FOREIGN KEY (id_cliente) REFERENCES tbl_datoscliente(id_cliente)
 );
 
--- Creación de la tabla tbl_movimientos
+-- Creaciï¿½n de la tabla tbl_movimientos
 CREATE TABLE tbl_movimientos (
     id_movimiento INT PRIMARY KEY AUTO_INCREMENT,
     id_cuenta INT NOT NULL,
@@ -34,7 +34,31 @@ CREATE TABLE tbl_movimientos (
     FOREIGN KEY (id_cuenta) REFERENCES tbl_cuenta(id_cuenta)
 );
 
---Creación de Procedure selectMovimientos
+-- Insertar datos de un cliente
+INSERT INTO tbl_datoscliente (nombre, apellido, telefono_movil, direccion)
+VALUES ('Juan', 'Pï¿½rez', '123456789', 'Calle Principal 123');
+
+-- Insertar otro cliente
+INSERT INTO tbl_datoscliente (nombre, apellido, telefono_movil, direccion)
+VALUES ('Marï¿½a', 'Gonzï¿½lez', '987654321', 'Avenida Secundaria 456');
+
+-- Insertar una cuenta asociada al cliente con id_cliente = 1
+INSERT INTO tbl_cuenta (id_cliente, tipo, saldo)
+VALUES (1, 'Cuenta de Ahorros', 1000.00);
+
+-- Insertar otra cuenta asociada al cliente con id_cliente = 2
+INSERT INTO tbl_cuenta (id_cliente, tipo, saldo)
+VALUES (2, 'Cuenta Corriente', 500.50);
+
+-- Insertar un movimiento en la cuenta con id_cuenta = 1
+INSERT INTO tbl_movimientos (id_cuenta, deposito, retiro)
+VALUES (1, 500.00, 0.00);
+
+-- Insertar otro movimiento en la cuenta con id_cuenta = 2
+INSERT INTO tbl_movimientos (id_cuenta, deposito, retiro)
+VALUES (2, 0.00, 100.25);
+
+--Creaciï¿½n de Procedure selectMovimientos
 
 CREATE PROCEDURE selectMovimientos
     @idCuenta INT
@@ -45,7 +69,7 @@ BEGIN
     WHERE id_cuenta = @idCuenta;
 END;
 
---Creación de Procedure selectCuentas
+--Creaciï¿½n de Procedure selectCuentas
 CREATE PROCEDURE selectCuentas
     @idCliente INT
 AS
