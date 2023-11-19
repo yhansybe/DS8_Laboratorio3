@@ -125,6 +125,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clases\ClienteManager.vb" />
+    <Compile Include="clases\MovimientosManager.vb" />
     <Compile Include="modulos\Conexion.vb" />
     <Compile Include="pantallas\FrmAgregarCuenta.Designer.vb">
       <DependentUpon>FrmAgregarCuenta.vb</DependentUpon>
@@ -181,6 +183,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallas\FrmMovimientos.resx">
+      <DependentUpon>FrmMovimientos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallas\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +211,7 @@
   <ItemGroup>
     <None Include="Resources\pexels-shonejai-1227515.jpg" />
     <Content Include="scripts\database.sql" />
+    <Content Include="scripts\selectCliente.sql" />
     <Content Include="xml\env.xml" />
   </ItemGroup>
   <ItemGroup />
