@@ -10,6 +10,8 @@
         Dim nombreClienteParts As String() = nombreClienteRaw.Split(" ")
         Dim id_cliente As Integer = Val(nombreClienteParts(nombreClienteParts.Length - 1))
 
+        Dim movimientosManager As New MovimientosManager()
+        movimientosManager.fillMovimientosGrid(dgvMovimientos, id_cliente)
     End Sub
 
 End Class

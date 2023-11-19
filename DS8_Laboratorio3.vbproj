@@ -207,6 +207,7 @@
   <ItemGroup>
     <Content Include="scripts\database.sql" />
     <Content Include="scripts\selectCliente.sql" />
+    <Content Include="scripts\selectMovimientos.sql" />
     <Content Include="xml\env.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
