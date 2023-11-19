@@ -3,7 +3,7 @@
 Module Conexion
     Public conexion As MySqlConnection
 
-    Public Function obtenerConexion() As MySqlConnection
+    Public Sub obtenerConexion()
         If conexion Is Nothing Then
             Try
                 Dim cadena As String = "server=localhost;database=ds8_lab3;userid=root"
@@ -14,7 +14,7 @@ Module Conexion
                 Console.WriteLine("X) Error al conectar: " & ex.Message)
             End Try
         End If
-    End Function
+    End Sub
 
     Public Sub CerrarConexion()
         If conexion IsNot Nothing AndAlso conexion.State = ConnectionState.Open Then

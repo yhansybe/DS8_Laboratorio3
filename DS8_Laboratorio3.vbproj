@@ -125,11 +125,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="clases\ClassAgregarCliente.vb" />
-=======
     <Compile Include="modulos\Conexion.vb" />
->>>>>>> master
+    <Compile Include="clases\ClassAgregarCliente.vb" />
     <Compile Include="pantallas\FrmAgregarCuenta.Designer.vb">
       <DependentUpon>FrmAgregarCuenta.vb</DependentUpon>
     </Compile>
@@ -211,11 +208,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\database.sql" />
-<<<<<<< HEAD
-    <Content Include="scripts\procInsert.sql" />
-=======
     <Content Include="xml\env.xml" />
->>>>>>> master
+    <Content Include="scripts\procInsert.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
