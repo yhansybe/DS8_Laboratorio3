@@ -27,12 +27,12 @@ Partial Class FrmCrearCliente
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.txtApellido = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -87,28 +87,14 @@ Partial Class FrmCrearCliente
         Me.Panel1.Size = New System.Drawing.Size(339, 194)
         Me.Panel1.TabIndex = 13
         '
-        'txtNombre
+        'Label5
         '
-        Me.txtNombre.Location = New System.Drawing.Point(21, 30)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(124, 20)
-        Me.txtNombre.TabIndex = 0
-        '
-        'txtApellido
-        '
-        Me.txtApellido.Location = New System.Drawing.Point(179, 30)
-        Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(124, 20)
-        Me.txtApellido.TabIndex = 5
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 14)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
-        Me.Label2.TabIndex = 15
-        Me.Label2.Text = "Nombre"
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(181, 82)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(52, 13)
+        Me.Label5.TabIndex = 18
+        Me.Label5.Text = "Dirección"
         '
         'Label3
         '
@@ -128,14 +114,28 @@ Partial Class FrmCrearCliente
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Teléfono"
         '
-        'Label5
+        'Label2
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(181, 82)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 13)
-        Me.Label5.TabIndex = 18
-        Me.Label5.Text = "Dirección"
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(18, 14)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "Nombre"
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(21, 30)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(124, 20)
+        Me.txtNombre.TabIndex = 0
+        '
+        'txtApellido
+        '
+        Me.txtApellido.Location = New System.Drawing.Point(179, 30)
+        Me.txtApellido.Name = "txtApellido"
+        Me.txtApellido.Size = New System.Drawing.Size(124, 20)
+        Me.txtApellido.TabIndex = 5
         '
         'FrmCrearCliente
         '

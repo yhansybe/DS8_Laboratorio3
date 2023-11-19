@@ -208,8 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\database.sql" />
+    <Content Include="scripts\procInsertCuenta.sql" />
     <Content Include="xml\env.xml" />
-    <Content Include="scripts\procInsert.sql" />
+    <Content Include="scripts\procInsertCliente.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

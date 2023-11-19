@@ -3,22 +3,22 @@ Imports Google.Protobuf.WellKnownTypes
 Imports MySql.Data.MySqlClient
 
 Public Class ClassAgregarCliente
-    Dim nombre As String
-    Dim apellido As String
-    Dim direccion As String
-    Dim telefono As String
+    Dim nombre As TextBox
+    Dim apellido As TextBox
+    Dim direccion As TextBox
+    Dim telefono As TextBox
     Dim resul As Boolean
     Dim sqlCommand As New MySqlCommand
 
-    Public Sub New(txtNombre As TextBox, txtApellido As TextBox, txtDireccion As TextBox, txtTelefono As TextBox)
-        nombre = txtNombre.Text
-        apellido = txtApellido.Text
-        direccion = txtDireccion.Text
-        telefono = txtTelefono.Text
+    Public Sub New(ByRef txtNombre As TextBox, ByRef txtApellido As TextBox, ByRef txtDireccion As TextBox, ByRef txtTelefono As TextBox)
+        nombre = txtNombre
+        apellido = txtApellido
+        direccion = txtDireccion
+        telefono = txtTelefono
     End Sub
     Public Function agregarCliente() As String
         Try
-            If nombre And apellido And direccion And telefono <> "" Then
+            If Not String.IsNullOrEmpty(nombre.Text) AndAlso Not String.IsNullOrEmpty(apellido.Text) AndAlso Not String.IsNullOrEmpty(direccion.Text) AndAlso Not String.IsNullOrEmpty(telefono.Text) Then
                 sqlCommand.Connection = Conexion.conexion
                 sqlCommand.CommandText = "proc_insert_cliente"
                 sqlCommand.Parameters.AddWithValue("@nombre", nombre)
@@ -33,12 +33,16 @@ Public Class ClassAgregarCliente
                 resul = sqlCommand.ExecuteNonQuery()
 
                 If resul Then
-                    Return MsgBox("Inserción Exitosa")
+                    nombre.Text = ""
+                    apellido.Text = ""
+                    direccion.Text = ""
+                    telefono.Text = ""
+                    Return MsgBox("Cliente Agregado con exito")
                 Else
-                    Return MsgBox("Error en la inserción")
+                    Return MsgBox("Error al agregar cliente")
                 End If
             Else
-                Return MsgBox("No deje datos en blsnco")
+                Return MsgBox("No deje datos en blanco")
             End If
 
         Catch ex As Exception
