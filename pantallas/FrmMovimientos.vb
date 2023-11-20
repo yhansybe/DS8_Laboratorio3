@@ -1,8 +1,9 @@
 ﻿Public Class FrmMovimientos
+    Dim listUser As String
 
     Private Sub FrmMovimientos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim clienteManager As New ClienteManager()
-        clienteManager.fillComboBoxClientes(cbClientes)
+        clienteManager.fillComboBoxClientes(cbClientes, listUser)
     End Sub
 
     Private Sub cbClientes_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbClientes.SelectedIndexChanged

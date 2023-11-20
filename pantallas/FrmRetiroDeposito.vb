@@ -1,8 +1,21 @@
-﻿Imports System.Drawing.Drawing2D
+﻿Imports Microsoft.VisualBasic.ApplicationServices
 
 Public Class FrmRetiroDeposito
+    Dim clientes As New ClienteManager
+    Dim cuentas As New CuentasManager
+    Dim Movimientos As New MovimientoInsert
+    Dim listUser As String
+    Dim listAccount As String
+
+    Public Sub New()
+        InitializeComponent()
+        clientes.fillComboBoxClientes(cbNombre, listUser)
+    End Sub
+
     Private Sub btnRetiro_Click_1(sender As Object, e As EventArgs)
         tbTransaccion.Text = "Retiro"
+
+
     End Sub
 
     Private Sub btnDeposito_Click_1(sender As Object, e As EventArgs)
@@ -23,8 +36,7 @@ Public Class FrmRetiroDeposito
     Private Sub tbSaldo_TextChanged_1(sender As Object, e As EventArgs) Handles tbSaldo.TextChanged
         If Not String.IsNullOrEmpty(Me.Text) Then
             btnEnviar.Visible = True
-            btnImprimir.Visible = True
-            txtInfo.Visible = True
+            btnSalir.Visible = True
         End If
     End Sub
 
@@ -37,6 +49,15 @@ Public Class FrmRetiroDeposito
     End Sub
 
     Private Sub cbNombre_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbNombre.SelectedIndexChanged
+        cbCuenta.Items.Clear()
+
+        Dim idUsers() = listUser.Split(" ")
+        Dim idUsuario = Val(idUsers(cbNombre.SelectedIndex))
+
+        cuentas.fillComboBoxCuentas(cbCuenta, idUsuario, listAccount)
+
+
+
         If Not String.IsNullOrEmpty(Me.Text) Then
             txtCuenta.Visible = True
             cbCuenta.Visible = True
@@ -87,5 +108,49 @@ Public Class FrmRetiroDeposito
         Dim numero = tbSaldo.Text
         numero = numero.Remove(numero.Length - 1, 1)
         tbSaldo.Text = numero
+    End Sub
+
+    Private Sub btnEnviar_Click(sender As Object, e As EventArgs) Handles btnEnviar.Click
+        Dim idAccounts() = listAccount.Split(" ")
+        Dim idAccount = Val(idAccounts(cbCuenta.SelectedIndex))
+        Movimientos.insertMovimiento(idAccount, Double.Parse(tbSaldo.Text), tbTransaccion)
+
+        cbCuenta.Visible = False
+
+        btnEnviar.Visible = False
+        btnRetiro.Visible = False
+        btnDeposito.Visible = False
+
+        lbMensaje.Visible = True
+        plMensaje.Visible = True
+
+
+
+    End Sub
+
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        tbTransaccion.Text = ""
+        tbSaldo.Text = ""
+
+        cbCuenta.Text = ""
+        cbNombre.Text = ""
+
+        txtCuenta.Visible = False
+        btnSalir.Visible = False
+        btnEnviar.Visible = False
+        cbCuenta.Visible = False
+
+        txtSaldo.Visible = False
+        tbSaldo.Visible = False
+
+        btnDeposito.Visible = False
+        btnRetiro.Visible = False
+        txtTransaccion.Visible = False
+        tbTransaccion.Visible = False
+
+
+        lbMensaje.Visible = False
+        plMensaje.Visible = False
     End Sub
 End Class

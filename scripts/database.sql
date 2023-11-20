@@ -2,7 +2,7 @@ CREATE DATABASE ds8_lab3;
 
 USE ds8_lab3;
 
--- Creaci�n de la tabla tbl_datoscliente
+-- Creacion de la tabla tbl_datoscliente
 CREATE TABLE tbl_datoscliente (
     id_cliente INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE tbl_datoscliente (
     fecha_modificacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
--- Creaci�n de la tabla tbl_cuenta
+-- Creacion de la tabla tbl_cuenta
 CREATE TABLE tbl_cuenta (
     id_cuenta INT PRIMARY KEY AUTO_INCREMENT,
     id_cliente INT,
@@ -24,7 +24,7 @@ CREATE TABLE tbl_cuenta (
     FOREIGN KEY (id_cliente) REFERENCES tbl_datoscliente(id_cliente)
 );
 
--- Creaci�n de la tabla tbl_movimientos
+-- Creacion de la tabla tbl_movimientos
 CREATE TABLE tbl_movimientos (
     id_movimiento INT PRIMARY KEY AUTO_INCREMENT,
     id_cuenta INT NOT NULL,
@@ -36,11 +36,11 @@ CREATE TABLE tbl_movimientos (
 
 -- Insertar datos de un cliente
 INSERT INTO tbl_datoscliente (nombre, apellido, telefono_movil, direccion)
-VALUES ('Juan', 'P�rez', '123456789', 'Calle Principal 123');
+VALUES ('Juan', 'Perez', '123456789', 'Calle Principal 123');
 
 -- Insertar otro cliente
 INSERT INTO tbl_datoscliente (nombre, apellido, telefono_movil, direccion)
-VALUES ('Mar�a', 'Gonz�lez', '987654321', 'Avenida Secundaria 456');
+VALUES ('Maria', 'Gonzalez', '987654321', 'Avenida Secundaria 456');
 
 -- Insertar una cuenta asociada al cliente con id_cliente = 1
 INSERT INTO tbl_cuenta (id_cliente, tipo, saldo)
@@ -58,23 +58,23 @@ VALUES (1, 500.00, 0.00);
 INSERT INTO tbl_movimientos (id_cuenta, deposito, retiro)
 VALUES (2, 0.00, 100.25);
 
---Creaci�n de Procedure selectMovimientos
-
-CREATE PROCEDURE selectMovimientos
-    @idCuenta INT
-AS
+DELIMITER //
+-- Creacion de Procedure selectMovimientos
+CREATE PROCEDURE selectMovimientos(IN idCuenta INT)
 BEGIN
     SELECT *
     FROM tbl_movimientos
     WHERE id_cuenta = @idCuenta;
-END;
+END //
+DELIMITER ;
 
---Creaci�n de Procedure selectCuentas
-CREATE PROCEDURE selectCuentas
-    @idCliente INT
-AS
+DELIMITER //
+-- Creacion de Procedure selectCuentas
+CREATE PROCEDURE selectCuentas(IN idCliente INT)
 BEGIN
     SELECT *
     FROM tbl_cuenta
     WHERE id_cliente = @idCliente;
-END;
+END//
+
+DELIMITER ;

@@ -34,6 +34,7 @@ Partial Class FrmRetiroDeposito
         Me.Button11 = New System.Windows.Forms.Button()
         Me.btn0 = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btnBorrar = New System.Windows.Forms.Button()
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button16 = New System.Windows.Forms.Button()
@@ -42,14 +43,13 @@ Partial Class FrmRetiroDeposito
         Me.Button15 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
-        Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnEnviar = New System.Windows.Forms.Button()
         Me.btnDeposito = New System.Windows.Forms.Button()
         Me.btnRetiro = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.cbCuenta = New System.Windows.Forms.ComboBox()
         Me.cbNombre = New System.Windows.Forms.ComboBox()
-        Me.txtInfo = New System.Windows.Forms.Label()
         Me.txtSaldo = New System.Windows.Forms.Label()
         Me.tbSaldo = New System.Windows.Forms.TextBox()
         Me.txtTransaccion = New System.Windows.Forms.Label()
@@ -66,11 +66,13 @@ Partial Class FrmRetiroDeposito
         Me.Button34 = New System.Windows.Forms.Button()
         Me.Button35 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.btnBorrar = New System.Windows.Forms.Button()
+        Me.plMensaje = New System.Windows.Forms.Panel()
+        Me.lbMensaje = New System.Windows.Forms.Label()
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        Me.plMensaje.SuspendLayout()
         Me.SuspendLayout()
         '
         'btn9
@@ -187,19 +189,29 @@ Partial Class FrmRetiroDeposito
         Me.Panel5.Controls.Add(Me.btn2)
         Me.Panel5.Controls.Add(Me.btn4)
         Me.Panel5.Controls.Add(Me.btn3)
-        Me.Panel5.Location = New System.Drawing.Point(181, 389)
+        Me.Panel5.Location = New System.Drawing.Point(196, 389)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(227, 214)
         Me.Panel5.TabIndex = 20
+        '
+        'btnBorrar
+        '
+        Me.btnBorrar.Location = New System.Drawing.Point(153, 157)
+        Me.btnBorrar.Name = "btnBorrar"
+        Me.btnBorrar.Size = New System.Drawing.Size(64, 45)
+        Me.btnBorrar.TabIndex = 19
+        Me.btnBorrar.Text = "Borrar"
+        Me.btnBorrar.UseVisualStyleBackColor = True
+        Me.btnBorrar.UseWaitCursor = True
         '
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Panel6.Controls.Add(Me.Panel3)
         Me.Panel6.Controls.Add(Me.Panel5)
-        Me.Panel6.Location = New System.Drawing.Point(165, 12)
+        Me.Panel6.Location = New System.Drawing.Point(171, 12)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(582, 625)
+        Me.Panel6.Size = New System.Drawing.Size(619, 625)
         Me.Panel6.TabIndex = 21
         '
         'Panel3
@@ -212,7 +224,7 @@ Partial Class FrmRetiroDeposito
         Me.Panel3.Controls.Add(Me.Button15)
         Me.Panel3.Controls.Add(Me.Button13)
         Me.Panel3.Controls.Add(Me.Button12)
-        Me.Panel3.Controls.Add(Me.btnImprimir)
+        Me.Panel3.Controls.Add(Me.btnSalir)
         Me.Panel3.Controls.Add(Me.btnEnviar)
         Me.Panel3.Controls.Add(Me.btnDeposito)
         Me.Panel3.Controls.Add(Me.btnRetiro)
@@ -220,7 +232,7 @@ Partial Class FrmRetiroDeposito
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Location = New System.Drawing.Point(19, 26)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(551, 346)
+        Me.Panel3.Size = New System.Drawing.Size(582, 346)
         Me.Panel3.TabIndex = 21
         '
         'Button16
@@ -262,36 +274,36 @@ Partial Class FrmRetiroDeposito
         'Button13
         '
         Me.Button13.Enabled = False
-        Me.Button13.Location = New System.Drawing.Point(465, 58)
+        Me.Button13.Location = New System.Drawing.Point(481, 58)
         Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(74, 45)
+        Me.Button13.Size = New System.Drawing.Size(88, 45)
         Me.Button13.TabIndex = 18
         Me.Button13.UseVisualStyleBackColor = True
         '
         'Button12
         '
         Me.Button12.Enabled = False
-        Me.Button12.Location = New System.Drawing.Point(465, 109)
+        Me.Button12.Location = New System.Drawing.Point(481, 109)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(74, 45)
+        Me.Button12.Size = New System.Drawing.Size(88, 45)
         Me.Button12.TabIndex = 17
         Me.Button12.UseVisualStyleBackColor = True
         '
-        'btnImprimir
+        'btnSalir
         '
-        Me.btnImprimir.Location = New System.Drawing.Point(15, 274)
-        Me.btnImprimir.Name = "btnImprimir"
-        Me.btnImprimir.Size = New System.Drawing.Size(74, 45)
-        Me.btnImprimir.TabIndex = 16
-        Me.btnImprimir.Text = "Imprimir"
-        Me.btnImprimir.UseVisualStyleBackColor = True
-        Me.btnImprimir.Visible = False
+        Me.btnSalir.Location = New System.Drawing.Point(15, 274)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(74, 45)
+        Me.btnSalir.TabIndex = 16
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        Me.btnSalir.Visible = False
         '
         'btnEnviar
         '
-        Me.btnEnviar.Location = New System.Drawing.Point(465, 274)
+        Me.btnEnviar.Location = New System.Drawing.Point(481, 274)
         Me.btnEnviar.Name = "btnEnviar"
-        Me.btnEnviar.Size = New System.Drawing.Size(74, 45)
+        Me.btnEnviar.Size = New System.Drawing.Size(88, 45)
         Me.btnEnviar.TabIndex = 15
         Me.btnEnviar.Text = "Enviar"
         Me.btnEnviar.UseVisualStyleBackColor = True
@@ -299,9 +311,9 @@ Partial Class FrmRetiroDeposito
         '
         'btnDeposito
         '
-        Me.btnDeposito.Location = New System.Drawing.Point(465, 211)
+        Me.btnDeposito.Location = New System.Drawing.Point(481, 211)
         Me.btnDeposito.Name = "btnDeposito"
-        Me.btnDeposito.Size = New System.Drawing.Size(74, 45)
+        Me.btnDeposito.Size = New System.Drawing.Size(88, 45)
         Me.btnDeposito.TabIndex = 13
         Me.btnDeposito.Text = "Deposito"
         Me.btnDeposito.UseVisualStyleBackColor = True
@@ -309,9 +321,9 @@ Partial Class FrmRetiroDeposito
         '
         'btnRetiro
         '
-        Me.btnRetiro.Location = New System.Drawing.Point(465, 160)
+        Me.btnRetiro.Location = New System.Drawing.Point(481, 160)
         Me.btnRetiro.Name = "btnRetiro"
-        Me.btnRetiro.Size = New System.Drawing.Size(74, 45)
+        Me.btnRetiro.Size = New System.Drawing.Size(88, 45)
         Me.btnRetiro.TabIndex = 12
         Me.btnRetiro.Text = "Retiro"
         Me.btnRetiro.UseVisualStyleBackColor = True
@@ -321,9 +333,9 @@ Partial Class FrmRetiroDeposito
         '
         Me.Panel4.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel4.Controls.Add(Me.plMensaje)
         Me.Panel4.Controls.Add(Me.cbCuenta)
         Me.Panel4.Controls.Add(Me.cbNombre)
-        Me.Panel4.Controls.Add(Me.txtInfo)
         Me.Panel4.Controls.Add(Me.txtSaldo)
         Me.Panel4.Controls.Add(Me.tbSaldo)
         Me.Panel4.Controls.Add(Me.txtTransaccion)
@@ -341,55 +353,43 @@ Partial Class FrmRetiroDeposito
         Me.Panel4.Controls.Add(Me.Button35)
         Me.Panel4.Location = New System.Drawing.Point(95, 47)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(364, 272)
+        Me.Panel4.Size = New System.Drawing.Size(374, 272)
         Me.Panel4.TabIndex = 10
         '
         'cbCuenta
         '
         Me.cbCuenta.FormattingEnabled = True
-        Me.cbCuenta.Items.AddRange(New Object() {"PRUEBA 0", "PRUEBA 1", "PRUEBA 2", "PRUEBA 3", "PRUEBA 4", "PRUEBA 5", "PRUEBA 6"})
-        Me.cbCuenta.Location = New System.Drawing.Point(243, 70)
+        Me.cbCuenta.Location = New System.Drawing.Point(202, 70)
         Me.cbCuenta.Name = "cbCuenta"
-        Me.cbCuenta.Size = New System.Drawing.Size(100, 24)
+        Me.cbCuenta.Size = New System.Drawing.Size(160, 24)
         Me.cbCuenta.TabIndex = 21
         Me.cbCuenta.Visible = False
         '
         'cbNombre
         '
         Me.cbNombre.FormattingEnabled = True
-        Me.cbNombre.Items.AddRange(New Object() {"PRUEBA 0", "PRUEBA 1", "PRUEBA 2", "PRUEBA 3", "PRUEBA 4", "PRUEBA 5", "PRUEBA 6"})
         Me.cbNombre.Location = New System.Drawing.Point(202, 16)
         Me.cbNombre.Name = "cbNombre"
-        Me.cbNombre.Size = New System.Drawing.Size(141, 24)
+        Me.cbNombre.Size = New System.Drawing.Size(160, 24)
         Me.cbNombre.TabIndex = 20
-        '
-        'txtInfo
-        '
-        Me.txtInfo.AutoSize = True
-        Me.txtInfo.Location = New System.Drawing.Point(3, 240)
-        Me.txtInfo.Name = "txtInfo"
-        Me.txtInfo.Size = New System.Drawing.Size(332, 16)
-        Me.txtInfo.TabIndex = 19
-        Me.txtInfo.Text = "Si desea imprimir la factura darle al botón de ""Imprimir"""
-        Me.txtInfo.Visible = False
         '
         'txtSaldo
         '
         Me.txtSaldo.AutoSize = True
         Me.txtSaldo.Location = New System.Drawing.Point(62, 196)
         Me.txtSaldo.Name = "txtSaldo"
-        Me.txtSaldo.Size = New System.Drawing.Size(54, 16)
+        Me.txtSaldo.Size = New System.Drawing.Size(43, 16)
         Me.txtSaldo.TabIndex = 18
-        Me.txtSaldo.Text = "Saldo a"
+        Me.txtSaldo.Text = "Saldo"
         Me.txtSaldo.Visible = False
         '
         'tbSaldo
         '
         Me.tbSaldo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbSaldo.Location = New System.Drawing.Point(243, 192)
+        Me.tbSaldo.Location = New System.Drawing.Point(202, 190)
         Me.tbSaldo.Name = "tbSaldo"
         Me.tbSaldo.ReadOnly = True
-        Me.tbSaldo.Size = New System.Drawing.Size(100, 22)
+        Me.tbSaldo.Size = New System.Drawing.Size(160, 22)
         Me.tbSaldo.TabIndex = 17
         Me.tbSaldo.Visible = False
         '
@@ -406,10 +406,10 @@ Partial Class FrmRetiroDeposito
         'tbTransaccion
         '
         Me.tbTransaccion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbTransaccion.Location = New System.Drawing.Point(243, 129)
+        Me.tbTransaccion.Location = New System.Drawing.Point(202, 129)
         Me.tbTransaccion.Name = "tbTransaccion"
         Me.tbTransaccion.ReadOnly = True
-        Me.tbTransaccion.Size = New System.Drawing.Size(100, 22)
+        Me.tbTransaccion.Size = New System.Drawing.Size(160, 22)
         Me.tbTransaccion.TabIndex = 15
         Me.tbTransaccion.Visible = False
         '
@@ -523,20 +523,34 @@ Partial Class FrmRetiroDeposito
         Me.Label9.TabIndex = 10
         Me.Label9.Text = "Banco FAGA"
         '
-        'btnBorrar
+        'plMensaje
         '
-        Me.btnBorrar.Location = New System.Drawing.Point(153, 157)
-        Me.btnBorrar.Name = "btnBorrar"
-        Me.btnBorrar.Size = New System.Drawing.Size(64, 45)
-        Me.btnBorrar.TabIndex = 19
-        Me.btnBorrar.Text = "Borrar"
-        Me.btnBorrar.UseVisualStyleBackColor = True
-        Me.btnBorrar.UseWaitCursor = True
+        Me.plMensaje.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.plMensaje.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.plMensaje.Controls.Add(Me.lbMensaje)
+        Me.plMensaje.Location = New System.Drawing.Point(-1, 0)
+        Me.plMensaje.Name = "plMensaje"
+        Me.plMensaje.Size = New System.Drawing.Size(374, 270)
+        Me.plMensaje.TabIndex = 31
+        Me.plMensaje.Visible = False
+        '
+        'lbMensaje
+        '
+        Me.lbMensaje.AutoSize = True
+        Me.lbMensaje.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbMensaje.Location = New System.Drawing.Point(6, 98)
+        Me.lbMensaje.Name = "lbMensaje"
+        Me.lbMensaje.Size = New System.Drawing.Size(361, 58)
+        Me.lbMensaje.TabIndex = 0
+        Me.lbMensaje.Text = "Muchas Gracias por preferirnos, " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "que tengas un excelente día"
+        Me.lbMensaje.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.lbMensaje.Visible = False
         '
         'FrmRetiroDeposito
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.DS8_Laboratorio3.My.Resources.Resources.pexels_shonejai_1227515
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(924, 751)
         Me.Controls.Add(Me.Panel6)
@@ -548,6 +562,8 @@ Partial Class FrmRetiroDeposito
         Me.Panel3.PerformLayout()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        Me.plMensaje.ResumeLayout(False)
+        Me.plMensaje.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -589,11 +605,12 @@ Partial Class FrmRetiroDeposito
     Friend WithEvents Label9 As Label
     Friend WithEvents Button14 As Button
     Friend WithEvents Button15 As Button
-    Friend WithEvents btnImprimir As Button
-    Friend WithEvents txtInfo As Label
+    Friend WithEvents btnSalir As Button
     Friend WithEvents Button16 As Button
     Friend WithEvents Button17 As Button
     Friend WithEvents cbCuenta As ComboBox
     Friend WithEvents cbNombre As ComboBox
     Friend WithEvents btnBorrar As Button
+    Friend WithEvents plMensaje As Panel
+    Friend WithEvents lbMensaje As Label
 End Class
