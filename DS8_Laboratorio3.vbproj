@@ -182,13 +182,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="pantallas\FrmAgregarCuenta2.resx">
       <DependentUpon>FrmAgregarCuenta2.vb</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallas\FrmMovimientos.resx">
       <DependentUpon>FrmMovimientos.vb</DependentUpon>
->>>>>>> flavio
     </EmbeddedResource>
     <EmbeddedResource Include="pantallas\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
