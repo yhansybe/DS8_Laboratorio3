@@ -209,12 +209,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\database.sql" />
-<<<<<<< HEAD
     <Content Include="scripts\StoredProcedure.sql" />
-=======
     <Content Include="scripts\selectCliente.sql" />
     <Content Include="scripts\selectMovimientos.sql" />
->>>>>>> flavio
     <Content Include="xml\env.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
