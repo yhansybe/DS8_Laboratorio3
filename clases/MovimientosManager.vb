@@ -2,18 +2,20 @@
 
 Public Class MovimientosManager
 
-    Public Sub fillMovimientosGrid(ByRef table As DataGridView)
+    Public Sub fillMovimientosGrid(ByRef table As DataGridView, cliente_id As Integer)
         Conexion.obtenerConexion()
 
         Try
-            Dim command As New MySqlCommand("selectClientes", Conexion.conexion)
+            Dim command As New MySqlCommand("selectMovimientosPorCliente", Conexion.conexion)
             command.CommandType = CommandType.StoredProcedure
+            command.Parameters.AddWithValue("@cliente_id", cliente_id)
 
             Dim reader As MySqlDataReader = command.ExecuteReader()
+            Dim dataTable As New DataTable()
+            dataTable.Load(reader)
 
-            While reader.Read()
-
-            End While
+            ' Asignar el DataTable al DataGridView
+            table.DataSource = dataTable
 
             reader.Close()
             Conexion.CerrarConexion()

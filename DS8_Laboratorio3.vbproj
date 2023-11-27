@@ -224,6 +224,7 @@
     <Content Include="scripts\procInsertCuenta.sql" />
     <Content Include="scripts\procUpdateCliente.sql" />
     <Content Include="scripts\selectCliente.sql" />
+    <Content Include="scripts\selectMovimientos.sql" />
     <Content Include="xml\env.xml" />
     <Content Include="scripts\procInsertCliente.sql" />
   </ItemGroup>
