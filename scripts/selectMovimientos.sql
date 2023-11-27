@@ -1,7 +1,7 @@
 ﻿DELIMITER //
 
 CREATE PROCEDURE selectMovimientosPorCliente(
-    IN cliente_id INT -- Parámetro de entrada para el ID del cliente
+    IN cliente_id INT 
 )
 BEGIN
     SELECT m.id_movimiento, c.tipo, m.deposito, m.retiro, m.fecha

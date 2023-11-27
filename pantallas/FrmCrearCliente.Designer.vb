@@ -39,24 +39,27 @@ Partial Class FrmCrearCliente
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(179, 98)
+        Me.txtDireccion.Location = New System.Drawing.Point(239, 121)
+        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtDireccion.Multiline = True
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(126, 46)
+        Me.txtDireccion.Size = New System.Drawing.Size(167, 56)
         Me.txtDireccion.TabIndex = 7
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(19, 98)
+        Me.txtTelefono.Location = New System.Drawing.Point(25, 121)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(126, 20)
+        Me.txtTelefono.Size = New System.Drawing.Size(167, 22)
         Me.txtTelefono.TabIndex = 6
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(12, 282)
+        Me.btnAgregar.Location = New System.Drawing.Point(16, 347)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(115, 47)
+        Me.btnAgregar.Size = New System.Drawing.Size(153, 58)
         Me.btnAgregar.TabIndex = 12
         Me.btnAgregar.Text = "Agregar Cliente"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -65,9 +68,10 @@ Partial Class FrmCrearCliente
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(192, 20)
+        Me.Label1.Location = New System.Drawing.Point(256, 25)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(141, 24)
+        Me.Label1.Size = New System.Drawing.Size(181, 29)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Agregar Cliente"
         '
@@ -83,79 +87,88 @@ Partial Class FrmCrearCliente
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtNombre)
         Me.Panel1.Controls.Add(Me.txtApellido)
-        Me.Panel1.Location = New System.Drawing.Point(12, 65)
+        Me.Panel1.Location = New System.Drawing.Point(16, 80)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(339, 194)
+        Me.Panel1.Size = New System.Drawing.Size(451, 238)
         Me.Panel1.TabIndex = 13
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(181, 82)
+        Me.Label5.Location = New System.Drawing.Point(241, 101)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 13)
+        Me.Label5.Size = New System.Drawing.Size(64, 16)
         Me.Label5.TabIndex = 18
         Me.Label5.Text = "Dirección"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(176, 14)
+        Me.Label3.Location = New System.Drawing.Point(235, 17)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(44, 13)
+        Me.Label3.Size = New System.Drawing.Size(57, 16)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Apellido"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(18, 82)
+        Me.Label4.Location = New System.Drawing.Point(24, 101)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 13)
+        Me.Label4.Size = New System.Drawing.Size(61, 16)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Teléfono"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 14)
+        Me.Label2.Location = New System.Drawing.Point(24, 17)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(44, 13)
+        Me.Label2.Size = New System.Drawing.Size(56, 16)
         Me.Label2.TabIndex = 15
         Me.Label2.Text = "Nombre"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(21, 30)
+        Me.txtNombre.Location = New System.Drawing.Point(28, 37)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(124, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(164, 22)
         Me.txtNombre.TabIndex = 0
         '
         'txtApellido
         '
-        Me.txtApellido.Location = New System.Drawing.Point(179, 30)
+        Me.txtApellido.Location = New System.Drawing.Point(239, 37)
+        Me.txtApellido.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtApellido.Name = "txtApellido"
-        Me.txtApellido.Size = New System.Drawing.Size(124, 20)
+        Me.txtApellido.Size = New System.Drawing.Size(164, 22)
         Me.txtApellido.TabIndex = 5
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(192, 282)
+        Me.btnUpdate.Location = New System.Drawing.Point(256, 347)
+        Me.btnUpdate.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(115, 47)
+        Me.btnUpdate.Size = New System.Drawing.Size(153, 58)
         Me.btnUpdate.TabIndex = 14
         Me.btnUpdate.Text = "Actualizar Cliente"
         Me.btnUpdate.UseVisualStyleBackColor = True
         '
         'FrmCrearCliente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(485, 400)
+        Me.ClientSize = New System.Drawing.Size(647, 492)
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FrmCrearCliente"
         Me.Text = "FrmCrearCliente"
         Me.Panel1.ResumeLayout(False)

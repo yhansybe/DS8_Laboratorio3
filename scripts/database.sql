@@ -57,24 +57,3 @@ VALUES (1, 500.00, 0.00);
 -- Insertar otro movimiento en la cuenta con id_cuenta = 2
 INSERT INTO tbl_movimientos (id_cuenta, deposito, retiro)
 VALUES (2, 0.00, 100.25);
-
-DELIMITER //
--- Creacion de Procedure selectMovimientos
-CREATE PROCEDURE selectMovimientos(IN idCuenta INT)
-BEGIN
-    SELECT *
-    FROM tbl_movimientos
-    WHERE id_cuenta = @idCuenta;
-END //
-DELIMITER ;
-
-DELIMITER //
--- Creacion de Procedure selectCuentas
-CREATE PROCEDURE selectCuentas(IN idCliente INT)
-BEGIN
-    SELECT *
-    FROM tbl_cuenta
-    WHERE id_cliente = @idCliente;
-END//
-
-DELIMITER ;

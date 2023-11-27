@@ -1,9 +1,8 @@
-﻿Imports Microsoft.VisualBasic.ApplicationServices
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class ClienteManager
 
-    Public Sub fillComboBoxClientes(ByRef comboBox As ComboBox, ByRef listUser As String)
+    Public Sub fillComboBoxClientes(ByRef comboBox As ComboBox)
         Conexion.obtenerConexion()
         Try
             Dim command As New MySqlCommand("selectClientes", Conexion.conexion)
@@ -12,8 +11,7 @@ Public Class ClienteManager
 
 
             While reader.Read()
-                comboBox.Items.Add(reader("nombre_completo").ToString())
-                listUser += (reader("id_cliente").ToString() & " ")
+                comboBox.Items.Add(reader("nombre_completo").ToString() & " - " & reader("id_cliente").ToString())
             End While
             reader.Close()
             Conexion.CerrarConexion()

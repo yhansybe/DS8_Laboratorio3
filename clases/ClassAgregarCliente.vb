@@ -1,6 +1,4 @@
-﻿Imports System.Net
-Imports Google.Protobuf.WellKnownTypes
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class ClassAgregarCliente
     Public nombre As TextBox
@@ -15,43 +13,41 @@ Public Class ClassAgregarCliente
         direccion = txtDireccion
         telefono = txtTelefono
     End Sub
+
     Public Sub New()
 
     End Sub
 
-    Public Function agregarCliente() As String
-        Dim resul As Boolean
+    Public Sub InsertarCliente(ByVal nombre As String, ByVal apellido As String, ByVal direccion As String, ByVal telefonoMovil As String, ByRef resultado As Boolean)
+        Conexion.obtenerConexion()
+
         Try
-            If Not String.IsNullOrEmpty(nombre.Text) AndAlso Not String.IsNullOrEmpty(apellido.Text) AndAlso Not String.IsNullOrEmpty(direccion.Text) AndAlso Not String.IsNullOrEmpty(telefono.Text) Then
-                sqlCommand.Connection = Conexion.conexion
-                sqlCommand.CommandText = "proc_insert_cliente"
-                sqlCommand.Parameters.AddWithValue("@nombre", nombre.Text.ToString)
-                sqlCommand.Parameters.AddWithValue("@apellido", apellido.Text.ToString)
-                sqlCommand.Parameters.AddWithValue("@direccion", direccion.Text.ToString)
-                sqlCommand.Parameters.AddWithValue("@telefono_movil", telefono.Text.ToString)
-                sqlCommand.Parameters.Add("@resul", MySqlDbType.Bit)
-                sqlCommand.Parameters("@resul").Direction = ParameterDirection.Output
-                sqlCommand.CommandTimeout = 0
-                sqlCommand.CommandType = CommandType.StoredProcedure
+            Dim command As New MySqlCommand("proc_insert_cliente", Conexion.conexion)
+            command.CommandType = CommandType.StoredProcedure
 
-                resul = sqlCommand.ExecuteNonQuery()
+            ' Parámetros de entrada
+            command.Parameters.AddWithValue("@p_nombre", nombre)
+            command.Parameters.AddWithValue("@p_apellido", apellido)
+            command.Parameters.AddWithValue("@p_direccion", direccion)
+            command.Parameters.AddWithValue("@p_telefono_movil", telefonoMovil)
 
-                If resul Then
-                    limpiar()
-                    Return MsgBox("Cliente Agregado con exito")
-                Else
-                    Return MsgBox("Error al agregar cliente")
-                End If
-            Else
-                Return MsgBox("No deje datos en blanco")
-            End If
+            ' Parámetro de salida
+            command.Parameters.Add("@resul", MySqlDbType.Bit)
+            command.Parameters("@resul").Direction = ParameterDirection.Output
 
+            ' Ejecutar el procedimiento almacenado
+            command.ExecuteNonQuery()
+
+            ' Obtener el valor de retorno
+            resultado = Convert.ToBoolean(command.Parameters("@resul").Value)
+
+            MsgBox("Cliente agregado")
+
+            Conexion.CerrarConexion()
         Catch ex As Exception
-            Return MsgBox(ex.Message)
-        Finally
-            CerrarConexion()
+            MessageBox.Show("Error: " & ex.Message)
         End Try
-    End Function
+    End Sub
 
     Public Function actualizarCliente(ByVal num_cuenta As Integer, ByVal separador As Object) As String
         Dim nombre_cliente As String = ""
@@ -65,7 +61,7 @@ Public Class ClassAgregarCliente
                 apellido_cliente = separador(cont)
             End If
         Next
-
+        Conexion.obtenerConexion()
         sqlCommand.Connection = Conexion.conexion
         sqlCommand.CommandText = "proc_update_cliente"
         sqlCommand.Parameters.AddWithValue("@p_nombre", nombre_cliente)
@@ -82,6 +78,7 @@ Public Class ClassAgregarCliente
         Else
             Return MsgBox("Error al actualizar cliente")
         End If
+        Conexion.CerrarConexion()
     End Function
     Private Sub limpiar()
         nombre.Text = ""

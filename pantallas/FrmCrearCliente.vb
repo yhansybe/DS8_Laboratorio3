@@ -1,12 +1,11 @@
-﻿Imports System.Net
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 Public Class FrmCrearCliente
     Private conn As MySqlConnection
 
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        Dim objAgregarCliente As New ClassAgregarCliente(txtNombre, txtApellido, txtDireccion, txtTelefono)
-        objAgregarCliente.agregarCliente()
+        Dim objAgregarCliente As New ClassAgregarCliente()
+        objAgregarCliente.InsertarCliente(txtNombre.Text, txtApellido.Text, txtDireccion.Text, txtTelefono.Text, True)
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click

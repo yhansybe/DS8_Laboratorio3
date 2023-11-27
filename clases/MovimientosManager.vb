@@ -24,4 +24,27 @@ Public Class MovimientosManager
         End Try
     End Sub
 
+    Public Sub insertMovimiento(ByVal idCuenta As Integer, ByVal saldo As Double, ByVal tbTransaccion As String)
+        Conexion.obtenerConexion()
+
+        Try
+            Dim command As New MySqlCommand("agregarMovimiento", Conexion.conexion)
+            command.CommandType = CommandType.StoredProcedure
+
+            ' Agregar parámetros al procedimiento almacenado
+            command.Parameters.AddWithValue("@idCuenta", idCuenta)
+            command.Parameters.AddWithValue("@monto", saldo)
+            command.Parameters.AddWithValue("@tipoOperacion", tbTransaccion)
+
+            ' Ejecutar el procedimiento almacenado
+            command.ExecuteNonQuery()
+
+            MsgBox("transacción realizada")
+
+            Conexion.CerrarConexion()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
+
 End Class
