@@ -9,7 +9,7 @@
     Private Sub RetirosYDepositosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RetirosYDepositosToolStripMenuItem.Click
         FrmRetiroDeposito.Close()
         FrmMovimientos.Close()
-        FrmAgregarCuenta.Close()
+        FrmAgregarCuenta2.Close()
 
         FrmRetiroDeposito.MdiParent = Me
         FrmRetiroDeposito.WindowState = FormWindowState.Maximized
@@ -20,7 +20,7 @@
     Private Sub MovimientosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MovimientosToolStripMenuItem.Click
         FrmRetiroDeposito.Close()
         FrmMovimientos.Close()
-        FrmAgregarCuenta.Close()
+        FrmAgregarCuenta2.Close()
 
         FrmMovimientos.MdiParent = Me
         FrmMovimientos.WindowState = FormWindowState.Maximized
@@ -31,18 +31,18 @@
     Private Sub CrearCuentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CrearCuentaToolStripMenuItem.Click
         FrmRetiroDeposito.Close()
         FrmMovimientos.Close()
-        FrmAgregarCuenta.Close()
+        FrmAgregarCuenta2.Close()
 
-        FrmAgregarCuenta.MdiParent = Me
-        FrmAgregarCuenta.WindowState = FormWindowState.Maximized
-        FrmAgregarCuenta.ControlBox = False
-        FrmAgregarCuenta.Show()
+        FrmAgregarCuenta2.MdiParent = Me
+        FrmAgregarCuenta2.WindowState = FormWindowState.Maximized
+        FrmAgregarCuenta2.ControlBox = False
+        FrmAgregarCuenta2.Show()
     End Sub
 
     Private Sub CreacionDeClienteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreacionDeClienteToolStripMenuItem.Click
         FrmRetiroDeposito.Close()
         FrmMovimientos.Close()
-        FrmAgregarCuenta.Close()
+        FrmAgregarCuenta2.Close()
         FrmCrearCliente.Close()
 
         FrmCrearCliente.MdiParent = Me
