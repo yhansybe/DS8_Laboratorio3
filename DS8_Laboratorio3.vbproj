@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clases\ClienteManager.vb" />
+    <Compile Include="clases\CuentaManager.vb" />
     <Compile Include="clases\MovimientosManager.vb" />
     <Compile Include="modulos\Conexion.vb" />
     <Compile Include="pantallas\FrmAgregarCuenta2.Designer.vb">

@@ -23,41 +23,34 @@ Partial Class FrmAgregarCuenta2
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnAgregarCuenta = New System.Windows.Forms.Button()
-        Me.tbSaldoInicial = New System.Windows.Forms.TextBox()
-        Me.cbTipoCuenta = New System.Windows.Forms.ComboBox()
+        Me.txtSaldoInicial = New System.Windows.Forms.TextBox()
         Me.lblTipoCuenta = New System.Windows.Forms.Label()
         Me.lblSaldoInicial = New System.Windows.Forms.Label()
+        Me.lblClienteId = New System.Windows.Forms.Label()
+        Me.cbCliente = New System.Windows.Forms.ComboBox()
+        Me.txtTCuenta = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'btnAgregarCuenta
         '
-        Me.btnAgregarCuenta.Location = New System.Drawing.Point(141, 113)
+        Me.btnAgregarCuenta.Location = New System.Drawing.Point(141, 136)
         Me.btnAgregarCuenta.Name = "btnAgregarCuenta"
         Me.btnAgregarCuenta.Size = New System.Drawing.Size(100, 23)
         Me.btnAgregarCuenta.TabIndex = 5
         Me.btnAgregarCuenta.Text = "Agregar Cuenta"
         Me.btnAgregarCuenta.UseVisualStyleBackColor = True
         '
-        'tbSaldoInicial
+        'txtSaldoInicial
         '
-        Me.tbSaldoInicial.Location = New System.Drawing.Point(141, 71)
-        Me.tbSaldoInicial.Name = "tbSaldoInicial"
-        Me.tbSaldoInicial.Size = New System.Drawing.Size(100, 20)
-        Me.tbSaldoInicial.TabIndex = 6
-        '
-        'cbTipoCuenta
-        '
-        Me.cbTipoCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbTipoCuenta.FormattingEnabled = True
-        Me.cbTipoCuenta.Location = New System.Drawing.Point(141, 30)
-        Me.cbTipoCuenta.Name = "cbTipoCuenta"
-        Me.cbTipoCuenta.Size = New System.Drawing.Size(121, 21)
-        Me.cbTipoCuenta.TabIndex = 7
+        Me.txtSaldoInicial.Location = New System.Drawing.Point(141, 94)
+        Me.txtSaldoInicial.Name = "txtSaldoInicial"
+        Me.txtSaldoInicial.Size = New System.Drawing.Size(121, 20)
+        Me.txtSaldoInicial.TabIndex = 6
         '
         'lblTipoCuenta
         '
         Me.lblTipoCuenta.AutoSize = True
-        Me.lblTipoCuenta.Location = New System.Drawing.Point(12, 33)
+        Me.lblTipoCuenta.Location = New System.Drawing.Point(12, 56)
         Me.lblTipoCuenta.Name = "lblTipoCuenta"
         Me.lblTipoCuenta.Size = New System.Drawing.Size(80, 13)
         Me.lblTipoCuenta.TabIndex = 8
@@ -66,21 +59,48 @@ Partial Class FrmAgregarCuenta2
         'lblSaldoInicial
         '
         Me.lblSaldoInicial.AutoSize = True
-        Me.lblSaldoInicial.Location = New System.Drawing.Point(12, 74)
+        Me.lblSaldoInicial.Location = New System.Drawing.Point(12, 97)
         Me.lblSaldoInicial.Name = "lblSaldoInicial"
         Me.lblSaldoInicial.Size = New System.Drawing.Size(64, 13)
         Me.lblSaldoInicial.TabIndex = 9
         Me.lblSaldoInicial.Text = "Saldo Inicial"
         '
+        'lblClienteId
+        '
+        Me.lblClienteId.AutoSize = True
+        Me.lblClienteId.Location = New System.Drawing.Point(12, 18)
+        Me.lblClienteId.Name = "lblClienteId"
+        Me.lblClienteId.Size = New System.Drawing.Size(39, 13)
+        Me.lblClienteId.TabIndex = 10
+        Me.lblClienteId.Text = "Cliente"
+        '
+        'cbCliente
+        '
+        Me.cbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbCliente.FormattingEnabled = True
+        Me.cbCliente.Location = New System.Drawing.Point(141, 15)
+        Me.cbCliente.Name = "cbCliente"
+        Me.cbCliente.Size = New System.Drawing.Size(121, 21)
+        Me.cbCliente.TabIndex = 11
+        '
+        'txtTCuenta
+        '
+        Me.txtTCuenta.Location = New System.Drawing.Point(141, 53)
+        Me.txtTCuenta.Name = "txtTCuenta"
+        Me.txtTCuenta.Size = New System.Drawing.Size(121, 20)
+        Me.txtTCuenta.TabIndex = 12
+        '
         'FrmAgregarCuenta2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 162)
+        Me.ClientSize = New System.Drawing.Size(284, 178)
+        Me.Controls.Add(Me.txtTCuenta)
+        Me.Controls.Add(Me.cbCliente)
+        Me.Controls.Add(Me.lblClienteId)
         Me.Controls.Add(Me.lblSaldoInicial)
         Me.Controls.Add(Me.lblTipoCuenta)
-        Me.Controls.Add(Me.cbTipoCuenta)
-        Me.Controls.Add(Me.tbSaldoInicial)
+        Me.Controls.Add(Me.txtSaldoInicial)
         Me.Controls.Add(Me.btnAgregarCuenta)
         Me.Name = "FrmAgregarCuenta2"
         Me.Text = "Agregar Cuenta"
@@ -90,8 +110,10 @@ Partial Class FrmAgregarCuenta2
     End Sub
 
     Friend WithEvents btnAgregarCuenta As Button
-    Friend WithEvents tbSaldoInicial As TextBox
-    Friend WithEvents cbTipoCuenta As ComboBox
+    Friend WithEvents txtSaldoInicial As TextBox
     Friend WithEvents lblTipoCuenta As Label
     Friend WithEvents lblSaldoInicial As Label
+    Friend WithEvents lblClienteId As Label
+    Friend WithEvents cbCliente As ComboBox
+    Friend WithEvents txtTCuenta As TextBox
 End Class
