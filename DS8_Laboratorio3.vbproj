@@ -125,6 +125,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clases\ClienteManager.vb" />
+    <Compile Include="clases\CuentasManager.vb" />
+    <Compile Include="clases\MovimientoInsert.vb" />
+    <Compile Include="clases\MovimientosManager.vb" />
     <Compile Include="modulos\Conexion.vb" />
     <Compile Include="clases\ClassAgregarCliente.vb" />
     <Compile Include="pantallas\FrmAgregarCuenta.Designer.vb">
@@ -156,6 +160,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -187,8 +192,14 @@
     <EmbeddedResource Include="pantallas\FrmCrearCliente.resx">
       <DependentUpon>FrmCrearCliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallas\FrmMovimientos.resx">
+      <DependentUpon>FrmMovimientos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallas\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallas\FrmRetiroDeposito.resx">
+      <DependentUpon>FrmRetiroDeposito.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -207,11 +218,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pexels-shonejai-1227515.jpg" />
+    <None Include="Resources\pexels-shonejai-12275151.jpg" />
     <Content Include="scripts\database.sql" />
     <Content Include="scripts\procInsertCuenta.sql" />
     <Content Include="scripts\procUpdateCliente.sql" />
+    <Content Include="scripts\selectCliente.sql" />
     <Content Include="xml\env.xml" />
     <Content Include="scripts\procInsertCliente.sql" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
