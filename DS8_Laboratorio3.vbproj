@@ -125,6 +125,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clases\AgregarCuenta.vb" />
     <Compile Include="modulos\Conexion.vb" />
     <Compile Include="pantallas\FrmAgregarCuenta.Designer.vb">
       <DependentUpon>FrmAgregarCuenta.vb</DependentUpon>
