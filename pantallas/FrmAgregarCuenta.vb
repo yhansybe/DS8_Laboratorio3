@@ -1,7 +1,7 @@
 ﻿Public Class FrmAgregarCuenta
     Private clienteId As Integer
 
-    Public Sub New(clienteId As Integer)
+    Private Sub New(clienteId As Integer)
         InitializeComponent()
         Me.clienteId = clienteId
     End Sub

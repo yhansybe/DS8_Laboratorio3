@@ -1,5 +1,4 @@
-﻿Imports System.Data.SqlClient
-Imports MySql.Data.MySqlClient
+﻿Imports MySql.Data.MySqlClient
 
 Public Class AgregarCuenta
     Public Property IdCliente As Integer
