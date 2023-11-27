@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="modulos\Conexion.vb" />
+    <Compile Include="clases\ClassAgregarCliente.vb" />
     <Compile Include="pantallas\FrmAgregarCuenta.Designer.vb">
       <DependentUpon>FrmAgregarCuenta.vb</DependentUpon>
     </Compile>
@@ -180,6 +181,12 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="pantallas\FrmAgregarCuenta.resx">
+      <DependentUpon>FrmAgregarCuenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pantallas\FrmCrearCliente.resx">
+      <DependentUpon>FrmCrearCliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallas\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -201,7 +208,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\database.sql" />
+    <Content Include="scripts\procInsertCuenta.sql" />
+    <Content Include="scripts\procUpdateCliente.sql" />
     <Content Include="xml\env.xml" />
+    <Content Include="scripts\procInsertCliente.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

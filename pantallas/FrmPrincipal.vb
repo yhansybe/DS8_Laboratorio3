@@ -4,6 +4,7 @@
         FrmRetiroDeposito.WindowState = FormWindowState.Maximized
         FrmRetiroDeposito.ControlBox = False
         FrmRetiroDeposito.Show()
+        Conexion.obtenerConexion()
     End Sub
 
     Private Sub RetirosYDepositosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RetirosYDepositosToolStripMenuItem.Click
